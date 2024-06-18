@@ -1,0 +1,42 @@
+<script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const itemInput = document.getElementById('item-input');
+    const quantityInput = document.getElementById('quantity-input');
+    const addButton = document.getElementById('add-button');
+    const list = document.getElementById('list');
+
+    addButton.addEventListener('click', addItem);
+
+    function addItem() {
+        const item = itemInput.value.trim();
+        const quantity = quantityInput.value.trim();
+        
+        if (item !== '') {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${quantity} ${item}`;
+            list.appendChild(listItem);
+            itemInput.value = '';
+            quantityInput.value = '';
+        }
+    }
+});
+//  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
